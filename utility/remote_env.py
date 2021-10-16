@@ -47,12 +47,12 @@ class RobotorqueEnvironment(RemoteEnvironment):
         self.challenge = challenge
 
     def _parse_state(self, s):
-        bolt_pose = TransformationMatrix(np.array(s[0]))
-        robot_pose = TransformationMatrix(np.array(s[1]))
+        robot_pose = TransformationMatrix(np.array(s[0]))
+        bolt_pose = TransformationMatrix(np.array(s[1]))
         if self.challenge == Challenge.ROBOT:
             return {'robot_pose': robot_pose, 'bolt_pose': bolt_pose}
         elif self.challenge == Challenge.COMBINED:
-            return {'robot_pose': robot_pose, 'bolt_pose': get_bolt_depthimage(s['bolt_pose'])}
+            return {'robot_pose': robot_pose, 'bolt_pose': get_bolt_depthimage(bolt_pose)}
         raise Exception('Invalid Challenge')
 
     def reset(self):
