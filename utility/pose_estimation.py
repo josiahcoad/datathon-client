@@ -53,7 +53,7 @@ class SubmissionResult:
 
 def make_submission(estimates: List[TransformationMatrix]) -> SubmissionResult:
     assert len(estimates) == len(test_images)
-    endpoint = 'http://35.84.189.168:8090/'
+    endpoint = 'http://gm-challenge.tamudatathon.com:8090/'
     res = requests.post(endpoint + f'pose/submit/{_get_username()}', json={
         'estimates': np.array(estimates).tolist(),
     })
