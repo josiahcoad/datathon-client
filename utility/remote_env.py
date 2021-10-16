@@ -9,7 +9,7 @@ from nptyping import NDArray
 
 
 class RemoteEnvironment:
-    endpoint = 'http://35.84.189.168:8090'
+    endpoint = 'http://gm-challenge.tamudatathon.com:8090/'
 
     def __init__(self):
         self.username = _get_username()
