@@ -10,7 +10,7 @@ from typing import Union, Tuple
 
 
 class RemoteEnvironment:
-    endpoint = 'http://138.197.220.122:8090'
+    endpoint = 'http://35.84.189.168:8090'
 
     def __init__(self):
         self.username = _get_username()

@@ -3,7 +3,7 @@ import requests
 import os
 import pandas as pd
 
-_endpoint = 'http://138.197.220.122:8090'
+_endpoint = 'http://35.84.189.168:8090'
 
 
 class Challenge:
