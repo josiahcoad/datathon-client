@@ -1,4 +1,4 @@
-from typing import Any, Dict, Union
+from typing import Any, Dict, Union, Tuple
 import requests
 from utility.pose_data import DepthImage, get_bolt_depthimage
 
@@ -6,7 +6,6 @@ from utility.transformation_matrix import TransformationMatrix
 from .scoring_client import _get_username, Challenge
 import numpy as np
 from nptyping import NDArray
-from typing import Union, Tuple
 
 
 class RemoteEnvironment:
